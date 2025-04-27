@@ -21,8 +21,8 @@
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/expenze.git
-   cd expenze
+   git clone https://github.com/codeitnav/Expenze_Finance_Tracker.git
+   cd Expenze_Finance_Tracker
    ```
 
 2. **Install dependencies**
