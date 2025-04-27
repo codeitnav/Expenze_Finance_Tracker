@@ -1,24 +1,63 @@
-# Full Stack AI Fianace Platform with Next JS, Supabase, Tailwind, Prisma, Inngest, ArcJet, Shadcn UI Tutorial 🔥🔥
-## https://youtu.be/egS6fnZAdzk
+## Expenze – Personal Finance Tracker
 
-<img width="1470" alt="Screenshot 2024-12-10 at 9 45 45 AM" src="https://github.com/user-attachments/assets/1bc50b85-b421-4122-8ba4-ae68b2b61432">
+**Expenze** is your all-in-one solution to effortlessly manage, analyze, and optimize your personal finances. With powerful AI-driven features and a clean, intuitive interface, Expenze gives you the tools you need to master your money.
 
-### Make sure to create a `.env` file with following variables -
+---
 
-```
-DATABASE_URL=
-DIRECT_URL=
+### Everything you need to manage your finances
 
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
-CLERK_SECRET_KEY=
-NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
-NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
-NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/onboarding
-NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/onboarding
+| Feature                | Description                                                                                   |
+|------------------------|-----------------------------------------------------------------------------------------------|
+| **📊 Advanced Analytics**        | Get detailed insights into your spending patterns with AI-powered analytics.                 |
+| **🧾 Smart Receipt Scanner**     | Extract data automatically from receipts using advanced AI technology.                      |
+| **🕑 Budget Planning**           | Create and manage budgets with intelligent recommendations.                                 |
+| **💳 Multi-Account Support**     | Manage multiple accounts and credit cards in one place.                                     |
+| **🌐 Multi-Currency**            | Support for multiple currencies with real-time conversion.                                  |
+| **⚡ Automated Insights**        | Get automated financial insights and recommendations.                                       |
 
-GEMINI_API_KEY=
+---
 
-RESEND_API_KEY=
+### Getting Started
 
-ARCJET_KEY=
-```
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/expenze.git
+   cd expenze
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Run the development server**
+   ```bash
+   npm run dev
+   ```
+
+4. **Open your browser**  
+   Go to `http://localhost:3000` to start using Expenze.
+
+---
+
+### Tech Stack
+
+- **Next.js**
+- **React**
+- **Tailwind CSS**
+- **AI/ML for analytics and receipt scanning**
+- **Multi-currency and multi-account integrations**
+
+---
+
+### Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
+
+---
+
+### License
+
+This project is licensed under the MIT License.
+
+---

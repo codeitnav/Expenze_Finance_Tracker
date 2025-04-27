@@ -1,14 +1,23 @@
-import { Inter } from "next/font/google";
+import { Josefin_Sans, Roboto } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
 import { ClerkProvider } from "@clerk/nextjs";
 import { Toaster } from "sonner";
 
-const inter = Inter({ subsets: ["latin"] });
+const josefinSans = Josefin_Sans({
+  variable: "--font-josefin-sans",
+  subsets: ["latin"],
+});
+
+const roboto = Roboto({
+  variable: "--font-roboto",
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
 
 export const metadata = {
-  title: "Welth",
-  description: "One stop Finance Platform",
+  title: "Expenze",
+  description: "Personal Finance Tracker app",
 };
 
 export default function RootLayout({ children }) {
@@ -16,16 +25,19 @@ export default function RootLayout({ children }) {
     <ClerkProvider>
       <html lang="en">
         <head>
-          <link rel="icon" href="/logo-sm.png" sizes="any" />
+          <link rel="icon" href="/logo_light.png" sizes="any" />
         </head>
-        <body className={`${inter.className}`}>
+        <body
+  className={`bg-[#EEE5DA] text-foreground transition-colors duration-300 ${josefinSans.variable} ${roboto.variable} antialiased`}
+>
+
           <Header />
-          <main className="min-h-screen">{children}</main>
+          <main className="bg-[#EEE5DA] min-h-screen">{children}</main>
           <Toaster richColors />
 
-          <footer className="bg-blue-50 py-12">
+          <footer className="bg-[#EEE5DA] py-12">
             <div className="container mx-auto px-4 text-center text-gray-600">
-              <p>Made with 💗 by RoadsideCoder</p>
+              <p>Made with 💗 by Nav</p>
             </div>
           </footer>
         </body>

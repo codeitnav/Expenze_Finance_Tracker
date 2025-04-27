@@ -1,61 +1,44 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { Highlight } from "./ui/hero-highlight";
 
 const HeroSection = () => {
-  const imageRef = useRef(null);
-
-  useEffect(() => {
-    const imageElement = imageRef.current;
-
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      const scrollThreshold = 100;
-
-      if (scrollPosition > scrollThreshold) {
-        imageElement.classList.add("scrolled");
-      } else {
-        imageElement.classList.remove("scrolled");
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
-    <section className="pt-40 pb-20 px-4">
-      <div className="container mx-auto text-center">
-        <h1 className="text-5xl md:text-8xl lg:text-[105px] pb-6 gradient-title">
-          Manage Your Finances <br /> with Intelligence
-        </h1>
-        <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-          An AI-powered financial management platform that helps you track,
-          analyze, and optimize your spending with real-time insights.
-        </p>
-        <div className="flex justify-center space-x-4">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background text-foreground">
+
+      {/* Decorative Background Shape */}
+      <div className="absolute -top-32 -left-32 w-[600px] h-[600px] rounded-full opacity-30 blur-3xl z-0" />
+      
+      <div className="flex flex-col-reverse sm:flex-row items-center justify-center relative z-10 w-full max-w-7xl mx-auto px-6 py-12">
+        {/* Left Side - Text */}
+        <div className="flex-1 flex flex-col items-center sm:items-start text-center sm:text-left space-y-6">
+          <h1 className="text-4xl md:text-6xl font-extrabold text-neutral-900 dark:text-white leading-tight">
+            Take Control of Your Finances
+          </h1>
+          <Highlight className="inline-block  dark:text-white text-2xl md:text-4xl px-4 py-2 rounded-lg shadow-md mb-2">
+            with Smart Solutions
+          </Highlight>
           <Link href="/dashboard">
-            <Button size="lg" className="px-8">
+            <Button
+              size="lg"
+              className="px-12 py-4 mt-4 text-lg font-semibold bg-purple-700 hover:bg-purple-800 text-white shadow-lg transition"
+            >
               Get Started
             </Button>
           </Link>
-          <Link href="https://www.youtube.com/roadsidecoder">
-            <Button size="lg" variant="outline" className="px-8">
-              Watch Demo
-            </Button>
-          </Link>
         </div>
-        <div className="hero-image-wrapper mt-5 md:mt-0">
-          <div ref={imageRef} className="hero-image">
+        {/* Right Side - Hero Image */}
+        <div className="flex-1 flex justify-center mb-10 sm:mb-0">
+          <div className="relative  w-[450px] h-[350px] md:w-[600px] md:h-[480px] lg:w-[650px] lg:h-[520px]">
             <Image
-              src="/banner.jpeg"
-              width={1280}
-              height={720}
-              alt="Dashboard Preview"
-              className="rounded-lg shadow-2xl border mx-auto"
+              src="/Hero_img.png"
+              alt="Hero Image"
+              fill
+              className="object-contain drop-shadow-xl"
               priority
             />
           </div>
